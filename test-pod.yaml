@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    monitoring: "true"
+  name: nginx-pod
+  labels:
+    app: prometheus
+    tier: dev
+spec:
+  containers:
+  - name: promethues
+    image: prom/prometheus
